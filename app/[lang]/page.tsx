@@ -2,9 +2,9 @@ import { GetStarted } from "@/app/components/get-started";
 import { LanguageSwitcher } from "@/app/components/language-switcher";
 import React from "react";
 import { Logo } from "@/app/components/logo";
-import { translate, T } from "@/app/lib/translate";
-import { createT, Language } from "@magic-translate/react-ssr";
-import { Metadata, NextPage, ResolvingMetadata } from "next";
+import { T, translate } from "@/app/lib/translate";
+import { Language } from "@magic-translate/react-ssr";
+import { GetStaticPaths, Metadata } from "next";
 
 type Props = {
   params: { lang: Language };
@@ -21,6 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Magic Translate is the easiest way to translate React applications into any language."
     ),
   };
+}
+
+export async function generateStaticParams() {
+  return Object.values<Language>(Language).map((lang) => ({
+    lang,
+  }));
 }
 
 export default async function Home({ params: { lang } }: Props) {
