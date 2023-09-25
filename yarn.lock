@@ -116,6 +116,13 @@
   dependencies:
     dataloader "^2.1.0"
 
+"@magic-translate/core@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@magic-translate/core/-/core-1.2.1.tgz#402cb4941c7687524ffa578da751f2b1c23bd225"
+  integrity sha512-Z8ECqdvOhXi8UMvJC95+ufJaYJBz2hNrW/RAsJ9Md4J5slixcDmQdoI1r6q+s81g7mSt15hGBZg6I1LhIiU5lw==
+  dependencies:
+    dataloader "^2.1.0"
+
 "@magic-translate/react-ssr@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@magic-translate/react-ssr/-/react-ssr-1.0.2.tgz#e9aa63db9c222c3d563b92bbdf087fe7c538647e"
